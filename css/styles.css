@@ -1,0 +1,98 @@
+:root {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+ul {
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  max-width: 661px;
+  margin: 0 auto;
+  margin-top: 50px;
+  background-color: #C4C4C4;
+  padding-top: 62px;
+  padding-bottom: 72px;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+}
+
+.search-input {
+  display: block;
+  margin: 0 auto;
+  padding-left: 13px;
+  width: 500px;
+  height: 61px;
+
+  border: 2px solid;
+  background-color: #FFFFFF;
+
+  font-size: 48px;
+  line-height: 56px;
+  
+}
+
+.search-list {
+  font-size: 30px;
+  line-height: 35px;
+}
+
+.search-list__item {
+  margin: 0 auto;
+  padding-left: 13px;
+  width: 500px;
+  height: 44px;
+  background-color: #E3E3E3;
+  border: 2px solid #000000;
+}
+
+.search-list__item:hover {
+  background-color: #65CDF9;
+}
+
+.repo-list {
+  margin-top: 45px;
+
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.repo-list__card {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 504px;
+  background-color: #E27BEB;
+  border: 1px solid #000000;
+}
+
+.repo-list__card ul {
+  padding: 15px 0;
+  padding-left: 16px;
+}
+
+.repo-list__card li {
+  margin-bottom: 10px;
+}
+
+.repo-list__card li:last-child {
+  margin-bottom: 0;
+}
+
+img[data-cross] {
+  width: 42px;
+  height: 42px;
+  margin: auto 0;
+  margin-right: 34px;
+}
