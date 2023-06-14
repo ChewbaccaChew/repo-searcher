@@ -7,10 +7,14 @@ function onChange(event) {
   let url = new URL('https://api.github.com/search/repositories');
   url.searchParams.set('q', event.target.value);
   
-  fetch(url)
+  if (event.target.value.trim()) {
+    fetch(url)
     .then((response) => response.json())
     .then((response) => autoCompleter(response))
     .catch((error) => console.log(error));
+  } else {
+    searchList.innerHTML = '';
+  }
 }
 
 function autoCompleter(response) {
@@ -25,10 +29,6 @@ function autoCompleter(response) {
   }
   searchList.appendChild(fragment);
   
-  // if (boundEventHandler) {
-  //   searchList.removeEventListener('click', boundEventHandler);
-  // }
-  // searchList.addEventListener('click', boundEventHandler);
   boundEventHandler = addRepoToList(response);
   searchList.onclick = boundEventHandler;
 }
